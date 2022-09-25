@@ -106,7 +106,7 @@
             <h2 class="title">Career</h2>
             <div class="career_box">
                 <div class="career_wrap">
-                    <div class="period">2015.04.13 ~ 2022.08.31</div>
+                    <div class="period">2015.04.13 ~ 2022.08.31<div class="year_wrap"><span class="year_icon">9 years</span></div></div>
                     <div class="career">
                         <div class="company">NHN</div>
                         <ul>
@@ -150,7 +150,9 @@
     .profile {}
     .profile img {border-radius:50px; width:100px; height:100px; object-fit:cover; }
     .update_wrap {font-size:0.75rem; cursor:default;}
-    .update_wrap .update_icon {background-color:green; padding: 2px 10px 1px; border-radius:10px; margin-left:5px;}
+    .update_wrap .update_icon {background-color:green; padding: 2px 10px 1px; border-radius:10px; margin-left:5px; font-size:0.75rem; color:#fff;}
+    .year_wrap {display:flex; justify-content: center; margin-top:10px;}
+    .year_wrap .year_icon {background-color:green; padding: 2px 10px 1px; border-radius:10px; background-color:#777; color:#FFF; font-size:0.75rem;}
 
     .content_wrap {height: 100vh; width: 60vw; overflow: scroll; margin: 0 auto;
         background-image: url(https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821__340.jpg); background-size: cover; background-position: center;}
@@ -204,6 +206,7 @@
     @media (max-width: 900px) {
         /** mobile */
         .content_wrap {width:90vw;}
+        .year_wrap {margin-top:0px; display:inline-block; margin-left:10px;}
 
         .career_box .career_wrap {display:block;}
         .career_box .career_wrap .period {font-size:1.5rem;}
