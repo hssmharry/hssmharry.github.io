@@ -13,7 +13,28 @@
     <div class="content">
         <div class="empty_section"></div>
         <div class="section">
-            <h2 class="title">Contract</h2>
+            <h2 class="title">About</h2>
+            <div class="info_box">
+                <div class="info_wrap">
+                    <div class="icon"><span class="material-symbols-outlined">sentiment_very_satisfied</span></div>
+                    <div class="text">Misol Park (박미솔) </div>
+                </div>
+                <div class="info_wrap">
+                    <div class="icon"><span class="material-symbols-outlined">female</span></div>
+                    <div class="text">female</div>
+                </div>
+                <div class="info_wrap">
+                    <div class="icon"><span class="material-symbols-outlined">cake</span></div>
+                    <div class="text">1988.11.15</div>
+                </div>
+                <div class="info_wrap">
+                    <div class="icon"><span class="material-symbols-outlined">pin_drop</span></div>
+                    <div class="text">경기도 부천</div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="title">Contact</h2>
             <div class="info_box">
                 <div class="info_wrap">
                     <div class="icon"><span class="material-symbols-outlined">mail</span></div>
@@ -77,6 +98,39 @@
                 </div>
             </div>
         </div>
+        <div class="section">
+            <h2 class="title">Career</h2>
+            <div class="career_box">
+                <div class="career_wrap">
+                    <div class="period">2015.04.13 ~ 2022.08.31</div>
+                    <div class="career">
+                        <div class="company">NHN</div>
+                        <ul>
+                            <li class="semi_title">[상품]</li>
+                            <li>상품 옵션 및 재고 초기 설계 및 개발 담당 <span class="br"></span>(옵션 등록,수정,삭제 / 재고연동 상품 복사 / 상품 심사 등..)</li>
+                            <li>사내 검색 엔진을 통한 검색 처리</li>
+                            <li>그 외 전반적인 상품 관련된 기능 서포트</li>
+                            <li class="semi_title">[전시]</li>
+                            <li>상품 전시(노출) 관련 개발 담당</li>
+                            <li>레디스 및 로컬캐쉬를 활용한 캐시처리</li>
+                            <li>페이스북 및 인스타그램 연동</li>
+                            <li class="semi_title">[회원]</li>
+                            <li>통합회원 가입 시 본인인증 처리 진행</li>
+                            <li>기타 유지보수</li>
+                            <li class="semi_title">[프론트엔드]</li>
+                            <li>(MSA 전환 이전) 어드민 페이지 화면 개발</li>
+                            <li>전반적인 레이아웃 및 공통 CSS, javascript 세팅 담당 (ui layout, 버튼 클릭 이벤트, 캘린더 등..)</li>
+                            <li class="semi_title">[특이사항]</li>
+                            <li>프로젝트 전체 MSA 전환 참여 유</li>
+                            <li>MSA로 전환하면서 어드민/프론트로 나누어 REST API 개발</li>
+                            <li>spring docs로 API 문서 제공 <span class="br"></span>(참고 : https://docs.shopby.co.kr/)</li>
+                            <li>핑다몰, 아이엠스쿨샵 오픈 및 서비스 종료 경험 유</li>
+                            <li>그 외에 대형 몰 (티딜, 1300K 등..) 오픈 시 데이터 마이그레이션 경험 유</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="empty_section"></div>
     </div>
 </div>
@@ -94,26 +148,30 @@
 
     .empty_section {height:50px;}
     .section {color:#999; padding:20px; box-sizing: border-box; margin:0 auto;}
-    .section h2.title {border-bottom:1px solid #fff; color:#FFF; line-height:35px;}
+    .section h2.title {color:#FFF; line-height:35px; cursor:default; border-bottom:1px solid #fff;}
+    .section h2.title:after {content:''; display:block; border-bottom:1px solid #fff; transform: scaleX(0);
+        transition: transform 250ms ease-in-out;}
+    .section h2.title:hover {border:none;}
+    .section h2.title:hover:after {border-bottom:1px solid #eeaaaa; transform: scaleX(1);}
 
     .tooltip_area {display:inline-block; position:relative;}
-    .tooltip_area .tooltip_icon {padding:2px 6px; font-size:0.8rem; background-color:#fff; color:#000; border-radius:15px; line-height:35px; cursor:pointer; vertical-align:middle;}
+    .tooltip_area .tooltip_icon {display:inline-block; text-align:center; width:20px; height:20px;font-size:0.8rem; background-color:#fff; color:#000; border-radius:15px; line-height:22px; cursor:pointer; vertical-align:middle;}
     .tooltip_area .tooltip_icon:hover {background-color:#eeaaaa; color:#FFF;}
-    .tooltip_area .tooltip {display:none; font-size:0.85rem; line-height:1.25rem; font-weight:100; padding:10px; background-color:#000; width:200px;
-        position:absolute; top:35px; left:25px;}
+    .tooltip_area .tooltip {z-index:1; display:none; font-size:0.85rem; line-height:1.25rem; font-weight:100; padding:10px; background-color:#000; width:200px;
+        position:absolute; top:20px; left:25px; color:#FFF;}
     .tooltip_area:hover > .tooltip {display:block;}
 
     .info_box {display:flex; flex-direction: column;}
     .info_box .info_wrap {display:flex; height:45px; cursor:default;}
-    .info_box .info_wrap:hover {color:#FFF; font-weight:600;}
+    .info_box .info_wrap:hover, .info_box .info_wrap:hover a {color:#eeaaaa; font-weight:600;}
     .info_box .info_wrap .icon {width:40px; }
     .info_box .info_wrap .text {font-size:1rem; line-height: 1.75rem;}
 
 
     .skill_box {}
     .skill_box h3:hover {color:#eeaaaa; cursor:default;}
-    .skill_box:hover h3 {color:#FFF; cursor:default;}
-    .skill_box:hover .skill_wrap {border:2px solid #eeaaaa; padding:19px;}
+    .skill_box:hover h3 {color:#eeaaaa; cursor:default;}
+    .skill_box:hover .skill_wrap {border:2px solid #eeaaaa; padding:19px; background-color: rgba(238,170,170, 0.08);}
     .skill_wrap {border:1px solid #999; padding:20px; display:flex; flex-direction:column;}
     .skill_wrap .skill:not(:last-child) {margin-bottom:20px;}
     .skill_wrap .skill {display:flex;}
@@ -126,8 +184,21 @@
     .level[data-level="2"]:after {content:'2'}
     .level[data-level="3"]:after {content:'3'}
 
+    .career_box {}
+    .career_box .career_wrap {display:flex;}
+    .career_box .career_wrap .period {font-size:1.35rem; padding:10px; }
+    .career_box .career_wrap .career {font-size:0.9rem; padding:10px;}
+    .career_box .career_wrap .career .company {font-size:1.35rem; color:#eeaaaa; font-weight:600; margin-left:5px;}
+    .semi_title {list-style:none; font-weight:600; color:#FFF; margin-left:-22px;}
+
     @media (max-width: 768px) {
+        /** mobile */
         .content_wrap {width:90vw;}
+
+        .career_box .career_wrap {display:block;}
+        .career_box .career_wrap .period {font-size:1.5rem;}
+
+        .br {display:block;}
     }
 </style>
 
