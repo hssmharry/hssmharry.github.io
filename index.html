@@ -9,17 +9,17 @@
 <body>
 <div class="content_wrap">
     <div class="content">
-        <h1>About misol :)</h1>
+        <div class="empty_section"></div>
         <div class="section">
             <h2 class="title">Contract</h2>
             <div class="info_box">
                 <div class="info_wrap">
                     <div class="icon"><span class="material-symbols-outlined">mail</span></div>
-                    <div class="text">1omo1@naver.com</div>
+                    <div class="text"><a href="mailto:1omo1@naver.com">1omo1@naver.com</a></div>
                 </div>
                 <div class="info_wrap">
                     <div class="icon"><span class="material-symbols-outlined">home</span></div>
-                    <div class="text">hssmharry</div>
+                    <div class="text"><a href="https://hssmharry.github.io/">https://hssmharry.github.io</a></div>
                 </div>
             </div>
         </div>
@@ -65,24 +65,29 @@
                 </div>
             </div>
         </div>
+        <div class="empty_section"></div>
     </div>
 </div>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 <style>
+    a {text-decoration:none; color:#999;}
+    a:hover {color:#FFF; text-decoration:underline;}
+
     .content_wrap {height: 100vh; width: 50vw; overflow: scroll; margin: 0 auto;
         background-image: url(https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821__340.jpg); background-size: cover; background-position: center;}
     .content_wrap .content {background-color: rgba(0,0,0,0.88); color:#FFF;}
 
+    .empty_section {height:50px;}
     .section {color:#999; padding:20px; box-sizing: border-box; margin:0 auto;}
     .section h2.title {border-bottom:1px solid #fff; color:#FFF;}
 
     .info_box {display:flex; flex-direction: column;}
     .info_box .info_wrap {display:flex; height:45px; cursor:default;}
     .info_box .info_wrap:hover {color:#FFF; font-weight:600;}
-    .info_box .info_wrap .icon {width:40px;}
-    .info_box .info_wrap .text {font-size:1rem; }
+    .info_box .info_wrap .icon {width:40px; }
+    .info_box .info_wrap .text {font-size:1rem; line-height: 1.75rem;}
 
 
     .skill_box {}
