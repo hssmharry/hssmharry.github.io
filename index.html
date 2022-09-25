@@ -12,6 +12,10 @@
 <div class="content_wrap">
     <div class="content">
         <div class="empty_section"></div>
+        <div class="profile_wrap">
+            <div class="profile"><img src="https://avatars.githubusercontent.com/u/11917504?v=4"></div>
+            <div class="update_wrap">Latest Updated <span class="update_icon">2022.09.26</span></div>
+        </div>
         <div class="section">
             <h2 class="title">About</h2>
             <div class="info_box">
@@ -140,39 +144,45 @@
 <style>
     body {background-color:#000;}
     a {text-decoration:none; color:#999;}
-    a:hover {color:#eeaaaa; text-decoration:underline;}
+    a:hover {color:#ef697d; text-decoration:underline;}
 
-    .content_wrap {height: 100vh; width: 50vw; overflow: scroll; margin: 0 auto;
+    .profile_wrap {display:flex; align-items:flex-end; justify-content: space-between;}
+    .profile {}
+    .profile img {border-radius:50px; width:100px; height:100px; object-fit:cover; }
+    .update_wrap {font-size:0.75rem; cursor:default;}
+    .update_wrap .update_icon {background-color:green; padding: 2px 10px 1px; border-radius:10px; margin-left:5px;}
+
+    .content_wrap {height: 100vh; width: 60vw; overflow: scroll; margin: 0 auto;
         background-image: url(https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821__340.jpg); background-size: cover; background-position: center;}
-    .content_wrap .content {background-color: rgba(0,0,0,0.88); color:#FFF;}
+    .content_wrap .content {padding:20px; background-color: rgba(0,0,0,0.88); color:#FFF;}
 
     .empty_section {height:50px;}
-    .section {color:#999; padding:20px; box-sizing: border-box; margin:0 auto;}
+    .section {color:#999; box-sizing: border-box; margin:0 auto;}
     .section h2.title {color:#FFF; line-height:35px; cursor:default; border-bottom:1px solid #fff;}
     .section h2.title:after {content:''; display:block; border-bottom:1px solid #fff; transform: scaleX(0);
         transition: transform 250ms ease-in-out;}
-    .section h2.title:hover {border:none;}
-    .section h2.title:hover:after {border-bottom:1px solid #eeaaaa; transform: scaleX(1);}
+    .section h2.title:hover {border:none; color:#ef697d; }
+    .section h2.title:hover:after {border-bottom:1px solid #ef697d; transform: scaleX(1);}
 
     .tooltip_area {display:inline-block; position:relative;}
     .tooltip_area .tooltip_icon {display:inline-block; text-align:center; width:20px; height:20px;font-size:0.8rem; background-color:#fff; color:#000; border-radius:15px; line-height:22px; cursor:pointer; vertical-align:middle;}
-    .tooltip_area .tooltip_icon:hover {background-color:#eeaaaa; color:#FFF;}
+    .tooltip_area .tooltip_icon:hover {background-color:#ef697d; color:#FFF;}
     .tooltip_area .tooltip {z-index:1; display:none; font-size:0.85rem; line-height:1.25rem; font-weight:100; padding:10px; background-color:#000; width:200px;
         position:absolute; top:20px; left:25px; color:#FFF;}
     .tooltip_area:hover > .tooltip {display:block;}
 
     .info_box {display:flex; flex-direction: column;}
     .info_box .info_wrap {display:flex; height:45px; cursor:default;}
-    .info_box .info_wrap:hover, .info_box .info_wrap:hover a {color:#eeaaaa; font-weight:600;}
+    .info_box .info_wrap:hover, .info_box .info_wrap:hover a {color:#ef697d; font-weight:600;}
     .info_box .info_wrap .icon {width:40px; }
     .info_box .info_wrap .text {font-size:1rem; line-height: 1.75rem;}
 
 
     .skill_box {}
-    .skill_box h3:hover {color:#eeaaaa; cursor:default;}
-    .skill_box:hover h3 {color:#eeaaaa; cursor:default;}
-    .skill_box:hover .skill_wrap {border:2px solid #eeaaaa; padding:19px; background-color: rgba(238,170,170, 0.08);}
-    .skill_wrap {border:1px solid #999; padding:20px; display:flex; flex-direction:column;}
+    .skill_box h3:hover {color:#ef697d; cursor:default;}
+    .skill_box:hover h3 {color:#ef697d; cursor:default;}
+    .skill_box:hover .skill_wrap {border:2px solid #ef697d; padding:19px; background-color: rgba(238,170,170, 0.08);}
+    .skill_wrap {padding:20px; border:1px solid #999; display:flex; flex-direction:column;}
     .skill_wrap .skill:not(:last-child) {margin-bottom:20px;}
     .skill_wrap .skill {display:flex;}
     .level {color:#777; font-size:0.8rem; background-color:initial; width:40px; height:25px; line-height:22px; text-align:center; border-radius:15px; margin-right:15px;}
@@ -188,10 +198,10 @@
     .career_box .career_wrap {display:flex;}
     .career_box .career_wrap .period {font-size:1.35rem; padding:10px; }
     .career_box .career_wrap .career {font-size:0.9rem; padding:10px;}
-    .career_box .career_wrap .career .company {font-size:1.35rem; color:#eeaaaa; font-weight:600; margin-left:5px;}
+    .career_box .career_wrap .career .company {font-size:1.35rem; color:#ef697d; font-weight:600; margin-left:5px;}
     .semi_title {list-style:none; font-weight:600; color:#FFF; margin-left:-22px;}
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         /** mobile */
         .content_wrap {width:90vw;}
 
