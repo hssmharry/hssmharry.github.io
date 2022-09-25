@@ -1,5 +1,7 @@
 <html lang="ko">
 <head>
+    <title>Developer like the sunshine of spring</title>
+    <link rel="shortcut icon" href="//cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-favorite-1.png">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +26,17 @@
             </div>
         </div>
         <div class="section">
-            <h2 class="title">Skills</h2>
+            <h2 class="title">
+                Skills
+                <div class="tooltip_area">
+                    <span class="tooltip_icon">?</span>
+                    <div class="tooltip">
+                        <div>Lv.1 : 기초 수준</div>
+                        <div>Lv.2 : 개인 프로젝트 적용 수준</div>
+                        <div>Lv.3 : 업무 적용 (경험) 수준</div>
+                    </div>
+                </div>
+            </h2>
             <div class="skill_box">
                 <h3>Backend</h3>
                 <div class="skill_wrap">
@@ -72,8 +84,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 <style>
+    body {background-color:#000;}
     a {text-decoration:none; color:#999;}
-    a:hover {color:#FFF; text-decoration:underline;}
+    a:hover {color:#eeaaaa; text-decoration:underline;}
 
     .content_wrap {height: 100vh; width: 50vw; overflow: scroll; margin: 0 auto;
         background-image: url(https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821__340.jpg); background-size: cover; background-position: center;}
@@ -81,19 +94,30 @@
 
     .empty_section {height:50px;}
     .section {color:#999; padding:20px; box-sizing: border-box; margin:0 auto;}
-    .section h2.title {border-bottom:1px solid #fff; color:#FFF;}
+    .section h2.title {color:#FFF; line-height:35px; cursor:default; border-bottom:1px solid #fff;}
+    .section h2.title:after {content:''; display:block; border-bottom:1px solid #fff; transform: scaleX(0);
+        transition: transform 250ms ease-in-out;}
+    .section h2.title:hover {border:none;}
+    .section h2.title:hover:after {border-bottom:1px solid #eeaaaa; transform: scaleX(1);}
+
+    .tooltip_area {display:inline-block; position:relative;}
+    .tooltip_area .tooltip_icon {padding:2px 6px; font-size:0.8rem; background-color:#fff; color:#000; border-radius:15px; line-height:35px; cursor:pointer; vertical-align:middle;}
+    .tooltip_area .tooltip_icon:hover {background-color:#eeaaaa; color:#FFF;}
+    .tooltip_area .tooltip {z-index:1; display:none; font-size:0.85rem; line-height:1.25rem; font-weight:100; padding:10px; background-color:#000; width:200px;
+        position:absolute; top:20px; left:25px; color:#FFF;}
+    .tooltip_area:hover > .tooltip {display:block;}
 
     .info_box {display:flex; flex-direction: column;}
     .info_box .info_wrap {display:flex; height:45px; cursor:default;}
-    .info_box .info_wrap:hover {color:#FFF; font-weight:600;}
+    .info_box .info_wrap:hover, .info_box .info_wrap:hover a {color:#eeaaaa; font-weight:600;}
     .info_box .info_wrap .icon {width:40px; }
     .info_box .info_wrap .text {font-size:1rem; line-height: 1.75rem;}
 
 
     .skill_box {}
-    .skill_box h3:hover {color:#FFF; cursor:default;}
-    .skill_box:hover h3 {color:#FFF; cursor:default;}
-    .skill_box:hover .skill_wrap {border:2px solid #FFF; padding:19px;}
+    .skill_box h3:hover {color:#eeaaaa; cursor:default;}
+    .skill_box:hover h3 {color:#eeaaaa; cursor:default;}
+    .skill_box:hover .skill_wrap {border:2px solid #eeaaaa; padding:19px; background-color: rgba(238,170,170, 0.08);}
     .skill_wrap {border:1px solid #999; padding:20px; display:flex; flex-direction:column;}
     .skill_wrap .skill:not(:last-child) {margin-bottom:20px;}
     .skill_wrap .skill {display:flex;}
