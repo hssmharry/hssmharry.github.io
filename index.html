@@ -106,7 +106,7 @@
             <h2 class="title">Career</h2>
             <div class="career_box">
                 <div class="career_wrap">
-                    <div class="period">2015.04.13 ~ 2022.08.31<div class="year_wrap"><span class="year_icon">9 years</span></div></div>
+                    <div class="period">2015.04.13 ~ 2022.08.31<div class="year_wrap"><span class="year_icon">퇴사</span></div></div>
                     <div class="career">
                         <div class="company">NHN</div>
                         <ul>
@@ -135,6 +135,69 @@
                 </div>
             </div>
         </div>
+        <div class="section">
+            <h2 class="title">TMI <span class="title_disc">태그를 클릭해보세요.</span></h2>
+            <div class="tag_wrap">
+                <div class="tag">봄날의_햇살같은_개발자</div>
+                <div class="tag">춤추는_개발자</div>
+                <div class="tag">게이머</div>
+                <div class="tag">엄마</div>
+                <div class="tag">커피러버</div>
+                <div class="tag">필라테스</div>
+                <div class="tag">해리포터_덕후</div>
+                <div class="tag">핑크_덕후</div>
+            </div>
+            <div class="tag_disc_wrap">
+                <p class="tag_disc">
+                    <span class="material-symbols-outlined">sunny</span>
+                    저의 가장 큰 장점은 매사에 밝고 긍정적인 태도입니다.<br>
+                    이 장점은 주변 동료들까지 밝고 에너지 넘치게 만들어줍니다.<br>
+                </p>
+                <p class="tag_disc">
+                    <span class="material-symbols-outlined">music_note</span>
+                    제 특기는 방송댄스입니다.<br>
+                    취미로 배우는거라 잘 추진 못하지만, 열심히 배우고 있어요.<br>
+                    최신곡들을 알 수 있어서 즐겁습니다.<br>
+                </p>
+                <p class="tag_disc">
+                    <span class="material-symbols-outlined">stadia_controller</span>
+                    저는 게임을 아주아주아주 좋아합니다.<br>
+                    잠시지만 아프리카 TV에서 게임 BJ로 활동했던 적도 있습니다.<br>
+                    특히 LOL은 직접 팀을 꾸려서 '레이디스 토너먼트', '직장인 대회'까지<br>
+                    참가할 정도로 아주 열정적으로 했습니다.<br>
+                    주 라인은 '미드', '원딜' 이에요.<br>
+                    물론 출산 이후 접었습니다..<br>
+                </p>
+                <p class="tag_disc">
+                    <span class="material-symbols-outlined">child_care</span>
+                    떡두꺼비같은 아들을 1명 키우고 있는 엄마입니다 :)<br>
+                </p>
+                <p class="tag_disc">
+                    <span class="material-symbols-outlined">local_cafe</span>
+                    하루에도 커피를 3잔 이상 마실정도로 엄청난 커피러버입니다.<br>
+                    끊으려고도 해봤지만.. 쉽제 않네요.<br>
+                </p>
+                <p class="tag_disc">
+                    <span class="material-symbols-outlined">sports_gymnastics</span>
+                    개발자에게 가장 필요한 것 중 하나는 체력이라고 생각합니다.<br>
+                    그래서 꾸준히 운동(신체적인 활동을)하려고 노력하는 편이에요.<br>
+                    개인적으로 헬스는 너무 재미 없어서 금방 질리게 되더라고요.<br>
+                    필라테스는 의외로 재미있어서 꾸준히 다니는 중입니다.<br>
+                </p>
+                <p class="tag_disc">
+                    <span class="material-symbols-outlined">auto_fix</span>
+                    해리포터를 좋아합니다.<br>
+                    'hssmharry'라는 아이디는 초등학교 때 해리포터를 읽고 감명 받아서<br>
+                    첫 계정의 아이디를 'hssmharry'라고 만든것부터 시작되었어요.<br>
+                </p>
+                <p class="tag_disc">
+                    <span class="material-symbols-outlined">Favorite</span>
+                    이 페이지를 보고 계시다면 이미 눈치채셨을 수도 있지만,<br>
+                    핑크색을 매우 좋아합니다.<br>
+                </p>
+            </div>
+        </div>
+        <div class="empty_section"></div>
         <div class="empty_section"></div>
     </div>
 </div>
@@ -161,6 +224,7 @@
     .empty_section {height:50px;}
     .section {color:#999; box-sizing: border-box; margin:0 auto;}
     .section h2.title {color:#FFF; line-height:35px; cursor:default; border-bottom:1px solid #fff;}
+    .section h2.title .title_disc{color:#999; font-size:0.85rem; font-weight:300;}
     .section h2.title:after {content:''; display:block; border-bottom:1px solid #fff; transform: scaleX(0);
         transition: transform 250ms ease-in-out;}
     .section h2.title:hover {border:none; color:#ef697d; }
@@ -201,7 +265,18 @@
     .career_box .career_wrap .period {font-size:1.35rem; padding:10px; }
     .career_box .career_wrap .career {font-size:0.9rem; padding:10px;}
     .career_box .career_wrap .career .company {font-size:1.35rem; color:#ef697d; font-weight:600; margin-left:5px;}
-    .semi_title {list-style:none; font-weight:600; color:#FFF; margin-left:-22px;}
+    .semi_title {list-style:none; font-weight:600; color:#FFF; margin-left:-22px; margin:5px 0px 5px -17px;}
+
+    .tag_title {margin-top:20px; color:#FFF; text-align:center;}
+    .tag_wrap {display:flex; margin-top:20px; flex-wrap:wrap;}
+    .tag_wrap .tag {margin-bottom:10px;cursor:pointer; line-height:30px; padding:2px 12px 0px; background-color:#FFF; border-radius:10px;}
+    .tag_wrap .tag.on, .tag_wrap .tag:hover {background-color:#ef697d; color:#FFF;}
+    .tag_wrap .tag:before {content:'#';}
+    .tag_wrap .tag:not(:last-child) {margin-right:10px;}
+
+    .tag_disc_wrap {background-color:rgba(255,255,255,0.15); padding:10px; margin-top:20px; display:none;}
+    .tag_disc {}
+    .tag_disc span {display:block; margin-bottom:10px;}
 
     @media (max-width: 900px) {
         /** mobile */
@@ -214,7 +289,18 @@
         .br {display:block;}
     }
 </style>
-
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(() => {
+        $(document).on('click', '.tag', (e) => {
+            let index = $(e.target).index();
+            $('.tag').removeClass('on');
+            $(e.target).addClass('on');
+            $('.tag_disc_wrap, .tag_disc_wrap .tag_disc').hide();
+            $(`.tag_disc_wrap, .tag_disc_wrap .tag_disc:eq(${index})`).show();
+        });
+    });
+</script>
 </body>
 </html>
 
